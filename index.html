@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="sheet.css" rel="stylesheet">
+    <link rel="stylesheet" media="(max-width: 800px)" href="mobile.css" />
+    <title>paginaNormal</title>
+</head>
+<body>
+  
+  <div class="wrapper">
+    <h1>
+      alo carolzita
+    </h1>
+      <img id="imagem"src="img.png" alt="para carol" onclick="">
+      <h1>Se clicar em não<br>é pq você é de direita 😬🇧🇷🇧🇷</h1>
+    <a href="https://www.youtube.com/watch?v=eTYsQw1RXks">
+   <button id="sim" >Sim 😁</button>
+    </a>
+<button id="fugitive-button">Não 😢</button>
+<details style="margin-top: 100px;"> <summary>
+  NÃO CLIQUE AQUI
+</summary>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sUbIEoAFGoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</details>
+<div style="height: 80px;">
+
+    <div class="box">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  
+
+
+
+
+<script>
+var button = document.getElementById("fugitive-button");
+var button2= document.getElementById("sim");
+// Adiciona um evento de movimento do mouse ao botão
+var controleBotao=0
+var image= document.getElementById("imagem")
+button.addEventListener("mousemove", function() {
+
+  // Altera a posição do botão aleatoriamente
+  var x = Math.floor(Math.random() * (window.innerWidth - button.offsetWidth));
+  var y = Math.floor(Math.random() * (window.innerHeight - button.offsetHeight));
+
+  button.style.left = x + "px";
+  button.style.top = y + "px";
+
+  controleBotao+= 1;
+  if (controleBotao==5){
+    alert("Ei... não pode!!! tem que clicar em sim 😊")
+
+  } else if(controleBotao==7){
+    alert("pufavo🥺🥺🥺")
+  } else if(controleBotao==8){
+    image.setAttribute("src","triste.jpeg")
+    image.setAttribute("alt","vo morre")
+    controleBotao=0;
+  }
+
+});
+
+</script>
+
+<style>
+#fugitive-button {
+  position:absolute;
+}
+</style>
+
+
+</html>
